@@ -1,0 +1,392 @@
+{
+  "slug": "medellin-terrace",
+  "name": "Medellín terrace flat",
+  "page_title": "Medellín Terrace Scout",
+  "grid_title": "Medellín Shots",
+  "grid_subtitle": "Terrace flat",
+  "map_intro": "Pieced together from your 10 photos, so walls and sizes are estimates. What matters is where the camera stands and which way it looks.",
+  "legend": [
+    {
+      "color": "cam",
+      "label": "Camera spot + view · art"
+    },
+    {
+      "color": "light",
+      "label": "Under the wooden roof"
+    },
+    {
+      "color": "glass",
+      "label": "Glass"
+    },
+    {
+      "color": "brick-soft",
+      "label": "Terrace"
+    }
+  ],
+  "spots_title": "Six spots",
+  "spots": [
+    {
+      "id": "A",
+      "name": "Galley pass",
+      "photo": "photos/07 kitchen.jpg",
+      "about": "From the fridge end, the galley leads your eye over the hob, through the pass, to the beams and mountain windows."
+    },
+    {
+      "id": "B",
+      "name": "Two chairs + glass doors",
+      "photo": "photos/04 two-chairs.jpg",
+      "about": "Behind the cream armchairs, the glass wall frames the terrace, brick and mountains. The calmest wide in the flat."
+    },
+    {
+      "id": "C",
+      "name": "The terrace",
+      "photo": "photos/01 terrace.jpg",
+      "about": "Brick, big sky, mountains past the parapet. The signature spot of this place."
+    },
+    {
+      "id": "D",
+      "name": "Sofa window",
+      "photo": "photos/06 sofa-window.jpg",
+      "about": "Grid window, tan sofa, mountains. Takes the late sun and throws pane shadows across the floor."
+    },
+    {
+      "id": "E",
+      "name": "Desk nook",
+      "photo": "photos/10 desk.jpg",
+      "about": "White desk, red drawers, beams, a window onto the park's running track. Symmetrical from behind the chair."
+    },
+    {
+      "id": "F",
+      "name": "Bed under the beams",
+      "photo": "photos/05 bedroom.jpg",
+      "about": "Pitched pine roof, three leaf paintings and a “Sigue tus sueños” sign. Centre the camera and it frames itself."
+    }
+  ],
+  "routine": {
+    "title": "Morning routine at the glass doors",
+    "intro": "Doors open, mat down, about 20 minutes. Shoot in this order and it cuts together as one sequence. Best before 8 am.",
+    "steps": [
+      {
+        "title": "Doors open",
+        "lens": "1×",
+        "camera": "Waist height, beside the door frame",
+        "how": "Slide the middle door all the way open. Let the curtain move and the outside sound come in.",
+        "preview": "previews/extras/Doors open.jpg"
+      },
+      {
+        "title": "Mat unrolls",
+        "lens": "2×",
+        "camera": "On the floor, mat rolls toward lens",
+        "how": "Same spot, just lower. Push the last roll flat with both hands.",
+        "preview": "previews/03 Mat unrolls.jpg"
+      },
+      {
+        "title": "Settle in",
+        "lens": "1×",
+        "camera": "Chest height, between the armchairs",
+        "how": "Sit facing the terrace. Leave this running for the whole sit; it doubles as a timelapse.",
+        "preview": "previews/04 Settle in.jpg"
+      },
+      {
+        "title": "Eyes closed",
+        "lens": "1×",
+        "camera": "Out on the terrace, looking in",
+        "how": "Phone on the terrace floor, propped low. You face the camera; the curtains frame you.",
+        "preview": "previews/05 Eyes closed.jpg"
+      },
+      {
+        "title": "Breath",
+        "lens": "3×",
+        "camera": "Side of the mat, tight on your profile",
+        "how": "One slow breath in and out. The open door turns into soft brick-and-green blur.",
+        "preview": "previews/06 Breath.jpg"
+      },
+      {
+        "title": "Reach up",
+        "lens": "0.5×",
+        "camera": "Low in the corner, 45° to the glass wall",
+        "how": "Stand, arms overhead. The long glass wall leads the eye to you.",
+        "preview": "previews/extras/Reach up.jpg"
+      },
+      {
+        "title": "Child's pose",
+        "lens": "1×",
+        "camera": "Floor level, side on",
+        "how": "End in stillness, arms toward the terrace. Hold it and let the curtain move.",
+        "preview": "previews/08 Childs pose.jpg"
+      }
+    ]
+  },
+  "buckets": [
+    "Work",
+    "Yoga + meditation",
+    "Slow living",
+    "Stills"
+  ],
+  "shots": [
+    {
+      "bucket": "Work",
+      "spot": "E",
+      "title": "Desk, back to camera",
+      "star": 1,
+      "lens": "1×",
+      "how": "Phone centred behind the chair at seated eye level. Desk lamp on.",
+      "preview": "previews/12 Desk back to camera.jpg"
+    },
+    {
+      "bucket": "Work",
+      "spot": "E",
+      "title": "Hands on the keys",
+      "lens": "3×",
+      "how": "Phone low at the side of the desk, window light grazing the keys. Shoot before lunch."
+    },
+    {
+      "bucket": "Work",
+      "spot": "C",
+      "title": "Laptop on the terrace",
+      "lens": "0.5×",
+      "how": "Work at the terrace table on a cloudy day. Full sun is too harsh."
+    },
+    {
+      "bucket": "Work",
+      "spot": "E",
+      "title": "Desk lamp only",
+      "lens": "1×",
+      "how": "After dark, only the desk lamp on, city lights in the window.",
+      "preview": "previews/extras/Desk lamp only.jpg"
+    },
+    {
+      "bucket": "Yoga + meditation",
+      "spot": "B",
+      "title": "Warrior at the glass doors",
+      "star": 1,
+      "lens": "1×",
+      "how": "Mat in front of the open middle door, phone low on the floor. Hold the pose side-on.",
+      "preview": "previews/07 Warrior at the glass doors.jpg"
+    },
+    {
+      "bucket": "Yoga + meditation",
+      "spot": "C",
+      "title": "Terrace flow",
+      "lens": "0.5×",
+      "how": "Mat lengthwise on the brick so the tile lines lead to you. Phone low in the corner."
+    },
+    {
+      "bucket": "Slow living",
+      "spot": "F",
+      "title": "Wake up under the beams",
+      "star": 1,
+      "lens": "0.5×",
+      "how": "Phone on the floor at the foot of the bed, centred. Sit up and stretch.",
+      "preview": "previews/02 Wake up under the beams.jpg"
+    },
+    {
+      "bucket": "Slow living",
+      "spot": "A",
+      "title": "Moka pot at the hob",
+      "star": 1,
+      "lens": "1×",
+      "how": "From the fridge end of the galley. Pour at the hob.",
+      "preview": "previews/09 Moka pot at the hob.jpg"
+    },
+    {
+      "bucket": "Slow living",
+      "spot": "C",
+      "title": "Coffee at the parapet",
+      "star": 1,
+      "lens": "1×",
+      "how": "From behind the terrace table. Forearms on the brick, mug in hand.",
+      "preview": "previews/10 Coffee at the parapet.jpg"
+    },
+    {
+      "bucket": "Slow living",
+      "spot": "D",
+      "title": "Golden hour on the sofa",
+      "star": 1,
+      "lens": "1×",
+      "how": "4:45–5:45 pm. Read in the window-pane shadows.",
+      "preview": "previews/13 Golden hour on the sofa.jpg"
+    },
+    {
+      "bucket": "Slow living",
+      "spot": "C",
+      "title": "Blue hour on the terrace",
+      "star": 1,
+      "lens": "1×",
+      "how": "About 6:00–6:15 pm. Wall lamp on, warm mug at the table.",
+      "preview": "previews/14 Blue hour on the terrace.jpg"
+    },
+    {
+      "bucket": "Slow living",
+      "spot": "F",
+      "title": "Reading by the bedside lamp",
+      "lens": "1×",
+      "how": "Only the geometric lamp on. Three-quarter angle from the side.",
+      "preview": "previews/16 Reading by the bedside lamp.jpg"
+    },
+    {
+      "bucket": "Stills",
+      "spot": "F",
+      "title": "Sigue tus sueños",
+      "star": 1,
+      "lens": "1×",
+      "how": "Straight on, sitting at the foot of the bed. Plain wall above for text.",
+      "preview": "previews/18 Sigue tus suenos.jpg"
+    },
+    {
+      "bucket": "Stills",
+      "spot": "C",
+      "title": "Sky over the brick",
+      "lens": "0.5×",
+      "how": "You small at the parapet, bottom third. Clouds fill the rest."
+    },
+    {
+      "bucket": "Stills",
+      "spot": "E",
+      "title": "Empty desk",
+      "lens": "1×",
+      "how": "The desk frame with nobody in it. A clean carousel opener."
+    }
+  ],
+  "reset": {
+    "title": "5-minute reset before filming",
+    "items": [
+      "**Shoes + slippers** by the glass doors go to the wardrobe.",
+      "**Suitcase + duffel** by the bar go to the wardrobe too.",
+      "**Both standing fans** out of the desk frame.",
+      "**Bed**: black sweater off. Beige pillows + one white.",
+      "**Galley end**: broom, mop, dustpan and bin out of frame.",
+      "**Curtains**: open every panel evenly.",
+      "**TV + router** stay out of frame."
+    ]
+  },
+  "light": {
+    "title": "Light in this flat",
+    "items": [
+      "**Sofa windows + desk** get the afternoon sun. Your golden-hour side.",
+      "**Mornings** on that side are soft. Best for faces.",
+      "**Glass doors**: soft light all afternoon. Great for silhouettes.",
+      "**Terrace**: hard shadow in the afternoon. Wait for clouds.",
+      "**Ceiling lights** off. Use the lamps after dark.",
+      "**Sunset** ≈ 5:50 pm. Blue hour runs about 20 minutes after."
+    ]
+  },
+  "footer": "Scouted from 10 iPhone photos, Oct 17, 2026. Checkmarks are saved on this device only.",
+  "grid": [
+    {
+      "title": "Open the curtain",
+      "line": "Walk in and pull the curtain all the way open.",
+      "preview": "previews/01 Open the curtain.jpg"
+    },
+    {
+      "title": "Wake up under the beams",
+      "line": "Sit up and stretch.",
+      "preview": "previews/02 Wake up under the beams.jpg"
+    },
+    {
+      "title": "Mat unrolls",
+      "preview": "previews/03 Mat unrolls.jpg"
+    },
+    {
+      "title": "Settle in",
+      "line": "Sit facing the terrace and let it roll.",
+      "preview": "previews/04 Settle in.jpg"
+    },
+    {
+      "title": "Eyes closed",
+      "preview": "previews/05 Eyes closed.jpg"
+    },
+    {
+      "title": "Breath",
+      "line": "One slow breath in and out.",
+      "preview": "previews/06 Breath.jpg"
+    },
+    {
+      "title": "Warrior at the glass doors",
+      "preview": "previews/07 Warrior at the glass doors.jpg"
+    },
+    {
+      "title": "Child's pose",
+      "preview": "previews/08 Childs pose.jpg"
+    },
+    {
+      "title": "Moka pot at the hob",
+      "line": "Pour the coffee into a mug.",
+      "preview": "previews/09 Moka pot at the hob.jpg"
+    },
+    {
+      "title": "Coffee at the parapet",
+      "preview": "previews/10 Coffee at the parapet.jpg"
+    },
+    {
+      "title": "Journaling at the bar",
+      "preview": "previews/11 Journaling at the bar.jpg"
+    },
+    {
+      "title": "Desk, back to camera",
+      "preview": "previews/12 Desk back to camera.jpg"
+    },
+    {
+      "title": "Golden hour on the sofa",
+      "line": "Read in the window-pane shadows.",
+      "preview": "previews/13 Golden hour on the sofa.jpg"
+    },
+    {
+      "title": "Blue hour on the terrace",
+      "line": "Wall lamp on, warm mug at the table.",
+      "preview": "previews/14 Blue hour on the terrace.jpg"
+    },
+    {
+      "title": "Glow from the terrace",
+      "line": "Shoot from outside. Use the desk lamp; there are no floor lamps.",
+      "preview": "previews/15 Glow from the terrace.jpg"
+    },
+    {
+      "title": "Reading by the bedside lamp",
+      "preview": "previews/16 Reading by the bedside lamp.jpg"
+    },
+    {
+      "title": "Late tea in the galley",
+      "line": "Pour the kettle; let the steam catch the light.",
+      "preview": "previews/17 Late tea in the galley.jpg"
+    },
+    {
+      "title": "Sigue tus sueños",
+      "line": "A photo. Leave the wall above you for text.",
+      "preview": "previews/18 Sigue tus suenos.jpg"
+    }
+  ],
+  "notes": {
+    "place": "Medellín terrace flat (Airbnb), scouted Oct 17, 2026 from 10 iPhone photos",
+    "description": "Top floor, one long open room. The bed and desk sit under a pitched wooden roof at one end, glass doors open onto a brick terrace at the other, and almost every window shows mountains.",
+    "size": {
+      "open_plan": "≈ 13 × 5.5 m",
+      "terrace": "≈ 3 × 7 m"
+    },
+    "features": [
+      "Wood beams over bed + desk",
+      "Windows on 3 sides",
+      "View: mountains + park running track",
+      "Brick terrace with parapet, table + 4 chairs, wall lamp",
+      "Three tall sliding glass doors with grey curtains",
+      "Galley kitchen with bar + purple stools",
+      "Two cream armchairs, tan sofa, round side tables",
+      "White desk with red drawers",
+      "Bed with three leaf paintings + 'Sigue tus sueños' sign",
+      "Geometric bedside lamp, desk lamp; no floor lamps"
+    ],
+    "light": {
+      "golden_side": "Sofa windows + desk get afternoon sun (likely west)",
+      "glass_doors": "No direct sun at 2:30 pm, soft all afternoon",
+      "terrace": "Hard brick-wall shadow in the afternoon",
+      "sunset": "≈ 5:50 pm mid-October, blue hour ~20 min after"
+    },
+    "previews": {
+      "model": "Higgsfield gpt_image_2_5, quality high, 2k, 9:16",
+      "reference": "matching scout photo",
+      "character": "see character.md"
+    },
+    "photos_folder": "photos/",
+    "previews_folder": "previews/ (unused ones in previews/extras/)"
+  }
+}

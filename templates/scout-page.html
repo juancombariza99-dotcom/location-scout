@@ -1,0 +1,219 @@
+<title>__PAGE_TITLE__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: phone-first scout sheet. Plan → spots → morning routine (swipe) → shot buckets → reset + light. One typeface, neutral greys; orange only marks camera spots. */
+:root{
+  --bg:#F6F6F4; --surface:#FFFFFF; --ink:#141414; --muted:#6E6E6A; --line:#E2E2DE; --focus:#141414;
+  --cam:#B5562F; --cam-soft:#F3E2D8; --glass:#D7E6EE; --brick:#C0623F; --brick-soft:#F1DDD2;
+  --light:#F3EBD9; --shade:#D9D9D4; --fig:#3A3A37; --accent-soft:#E4ECE8; --accent:#2F6454;
+  --sans:"Instrument Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --bg:#111111;--surface:#1A1A1A;--ink:#EDEDEA;--muted:#9A9A95;--line:#2A2A28;--focus:#EDEDEA;
+  --cam:#E8956F;--cam-soft:#3A2820;--glass:#1E2C33;--brick:#D9825F;--brick-soft:#33241D;
+  --light:#35301F;--shade:#2C2C2A;--fig:#C9C9C4;--accent-soft:#1F2E28;--accent:#8DC4AE}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#111111;--surface:#1A1A1A;--ink:#EDEDEA;--muted:#9A9A95;--line:#2A2A28;--focus:#EDEDEA;
+  --cam:#E8956F;--cam-soft:#3A2820;--glass:#1E2C33;--brick:#D9825F;--brick-soft:#33241D;
+  --light:#35301F;--shade:#2C2C2A;--fig:#C9C9C4;--accent-soft:#1F2E28;--accent:#8DC4AE}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:40px}
+button{font:inherit;color:inherit}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
+
+header.top{padding-block:28px 0;display:grid;gap:6px}
+.eyebrow{font-size:13px;font-weight:500;color:var(--muted)}
+h1{font-weight:600;font-size:clamp(28px,6vw,40px);line-height:1.1;margin:0;letter-spacing:-.02em;text-wrap:balance}
+h2{font-weight:600;font-size:22px;line-height:1.2;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h3{font-size:15px;font-weight:600;margin:0;line-height:1.3}
+section{display:grid;gap:14px;min-width:0}
+section>*{min-width:0}
+.sechead{display:grid;gap:4px}
+.sechead p{margin:0;color:var(--muted);max-width:62ch;font-size:14px}
+
+.map{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:grid;gap:10px;min-width:0}
+.svgbox{overflow-x:auto;min-width:0}
+.svgbox svg{display:block;width:100%;min-width:560px;height:auto}
+svg text{font-family:var(--sans);fill:var(--muted)}
+svg .lbl{font-size:10px} svg .lbl-ink{font-size:10px;fill:var(--ink)} svg .big{font-size:11px;fill:var(--ink);font-weight:600}
+svg .wall{fill:none;stroke:var(--ink);stroke-width:3} svg .thin{fill:none;stroke:var(--ink);stroke-width:1}
+svg .furn{fill:var(--shade);stroke:var(--fig);stroke-width:1} svg .soft{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1}
+svg .glass{fill:var(--glass);stroke:var(--ink);stroke-width:2} svg .wood{fill:var(--light);stroke:none}
+svg .terr{fill:var(--brick-soft);stroke:none} svg .parapet{fill:none;stroke:var(--brick);stroke-width:4}
+svg .rug{fill:none;stroke:var(--muted);stroke-width:1;stroke-dasharray:2 2} svg .dash{fill:none;stroke:var(--muted);stroke-width:.8;stroke-dasharray:3 3}
+svg .cone{fill:var(--cam);opacity:.16} svg .camdot{fill:var(--cam)}
+svg .camtxt{fill:var(--bg);font-size:10px;font-weight:600;font-family:var(--sans)}
+svg a{cursor:pointer}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted)}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+
+.spots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}
+@media (min-width:720px){.spots{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 16px}}
+.spot{display:grid;gap:8px;align-content:start;min-width:0;scroll-margin-top:16px}
+.spot .ph{position:relative}
+.spot img{width:100%;max-width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;display:block;background:var(--shade)}
+.spot:target img{outline:2px solid var(--cam);outline-offset:2px}
+.tag{position:absolute;top:8px;left:8px;width:26px;height:26px;border-radius:50%;background:var(--cam);color:#fff;font-size:13px;font-weight:600;line-height:26px;text-align:center}
+.spot p{margin:0;font-size:13.5px;line-height:1.45;color:var(--muted)}
+
+.seq{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(200px,62%);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;min-width:0}
+@media (min-width:760px){.seq{grid-auto-columns:220px}}
+.step{scroll-snap-align:start;display:grid;gap:8px;align-content:start;min-width:0}
+.step img{display:block;width:100%;max-width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:8px;background:var(--shade)}
+.step p{margin:0;font-size:13.5px;color:var(--muted)}
+
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;min-width:0}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip .n{color:var(--muted);margin-left:4px;font-weight:400}
+.chip[aria-pressed="true"] .n{color:inherit;opacity:.7}
+.bucket{display:grid;gap:8px}
+.bucket h3{font-size:13px;font-weight:600;color:var(--muted);padding-top:6px}
+.shot{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:start}
+.shot.done{opacity:.5}
+.shot .txt{display:grid;gap:4px;min-width:0}
+.shot .ttl{display:flex;gap:8px;align-items:center}
+.sp{flex:none;width:22px;height:22px;border-radius:50%;background:var(--cam-soft);color:var(--cam);font-size:12px;font-weight:600;line-height:22px;text-align:center;text-decoration:none}
+.shot p{margin:0;font-size:14px;color:var(--muted);max-width:60ch}
+.star{color:var(--cam)}
+.ck{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);cursor:pointer;user-select:none;width:max-content;margin-top:2px}
+.ck input{accent-color:var(--ink);width:17px;height:17px;margin:0}
+.pv{border:0;padding:0;background:none;cursor:zoom-in;display:block}
+.pv img{display:block;width:56px;aspect-ratio:9/16;object-fit:cover;border-radius:6px;background:var(--shade)}
+@media (min-width:640px){.pv img{width:72px}}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:16px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:10px;align-content:start;min-width:0}
+.panel ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.panel li{color:var(--muted);font-size:14px}
+.panel li b{color:var(--ink);font-weight:600}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:14px}
+
+dialog{border:0;padding:0;background:transparent;max-width:100vw;max-height:100%}
+dialog::backdrop{background:rgba(0,0,0,.85)}
+dialog img{display:block;max-height:88vh;max-width:min(92vw,520px);border-radius:8px}
+dialog p{color:#fff;font-size:14px;text-align:center;margin:10px 0 0}
+</style>
+
+<!-- Machine-readable notes for Claude (layout, size, light, room description). Not shown on the page. Use these when writing Higgsfield prompts or new shots for this place. -->
+<script type="application/json" id="place-notes">__NOTES__</script>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Location Scout</div>
+  <h1>__NAME__</h1>
+</header>
+
+<section id="map">
+  <div class="sechead">
+    <h2>The space</h2>
+    <p>__MAP_INTRO__</p>
+  </div>
+  <div class="map">
+    <div class="svgbox">__PLAN__</div>
+    __LEGEND__
+  </div>
+</section>
+
+<section id="spots">
+  <h2>__SPOTS_TITLE__</h2>
+  <div class="spots" id="spotGrid"></div>
+</section>
+
+<section id="routine">
+  <div class="sechead">
+    <h2>__ROUTINE_TITLE__</h2>
+    <p>__ROUTINE_INTRO__</p>
+  </div>
+  <div class="seq" id="seq"></div>
+</section>
+
+<section id="shots">
+  <div class="sechead">
+    <h2>Shot list</h2>
+    <p><span class="star">★</span> marks the ones to shoot first.</p>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div id="shotList" style="display:grid;gap:14px"></div>
+</section>
+
+<section id="prep">
+  <div class="two">
+    <div class="panel">
+      <h3>__RESET_TITLE__</h3>
+      <ul>
+__RESET__
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>__LIGHT_TITLE__</h3>
+      <ul>
+__LIGHT__
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>__FOOTER__</footer>
+</div>
+
+<dialog id="lb" aria-label="Preview"><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+
+<script>
+const IMG = __IMG__;
+const PV = __PV__;
+const SPOTS = __SPOTS__;
+const ROUTINE = __ROUTINE__;
+const BUCKETS = __BUCKETS__;
+const SHOTS = __SHOTS__;
+
+const store={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const done=new Set(store.get("scout-__SLUG__-done")||[]);
+let active=store.get("scout-__SLUG__-tab")||"All";
+if(active!=="All"&&!BUCKETS.includes(active)) active="All";
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+document.getElementById("spotGrid").innerHTML=SPOTS.map(s=>`
+  <article class="spot" id="spot-${s.id}"><div class="ph"><img src="${IMG[s.photo]}" alt="${esc(s.name)}" loading="lazy"><span class="tag">${s.id}</span></div>
+  <h3>${esc(s.name)}</h3><p>${esc(s.about)}</p></article>`).join("");
+
+document.getElementById("seq").innerHTML=ROUTINE.map(r=>`
+  <article class="step"><img src="${PV[r.preview]}" alt="${esc(r.title)}" loading="lazy"><h3>${esc(r.title)}</h3><p>${esc(r.how)}</p></article>`).join("");
+if(!ROUTINE.length) document.getElementById("routine").hidden=true;
+
+function renderChips(){
+  document.getElementById("chips").innerHTML=["All",...BUCKETS].map(b=>{
+    const n=b==="All"?SHOTS.length:SHOTS.filter(s=>s.bucket===b).length;
+    return `<button class="chip" type="button" aria-pressed="${b===active}" data-b="${esc(b)}">${esc(b)}<span class="n">${n}</span></button>`;
+  }).join("");
+}
+function renderShots(){
+  const groups=(active==="All"?BUCKETS:[active]).map(b=>{
+    const rows=SHOTS.map((s,i)=>({...s,i})).filter(s=>s.bucket===b).map(s=>{
+      const d=done.has(s.i);
+      return `<div class="shot${d?" done":""}"><div class="txt">
+        <div class="ttl"><a class="sp" href="#spot-${s.spot}" aria-label="Spot ${s.spot}">${s.spot}</a><h3>${s.star?'<span class="star">★ </span>':""}${esc(s.title)}</h3></div>
+        <p>${esc(s.how)}</p>
+        <label class="ck" for="ck${s.i}"><input type="checkbox" id="ck${s.i}" data-i="${s.i}" ${d?"checked":""}>Got it</label></div>
+        ${s.preview&&PV[s.preview]?`<button class="pv" type="button" data-pv="${esc(s.preview)}" data-cap="${esc(s.title)}" aria-label="See preview of ${esc(s.title)}"><img src="${PV[s.preview]}" alt="" loading="lazy"></button>`:"<span></span>"}
+      </div>`;}).join("");
+    return `<div class="bucket">${active==="All"?`<h3>${esc(b)}</h3>`:""}${rows}</div>`;
+  }).join("");
+  document.getElementById("shotList").innerHTML=groups;
+}
+document.getElementById("chips").addEventListener("click",e=>{const c=e.target.closest(".chip");if(!c)return;active=c.dataset.b;store.set("scout-__SLUG__-tab",active);renderChips();renderShots();});
+document.getElementById("shotList").addEventListener("change",e=>{const i=+e.target.dataset.i;if(Number.isNaN(i))return;e.target.checked?done.add(i):done.delete(i);store.set("scout-__SLUG__-done",[...done]);renderShots();});
+const lb=document.getElementById("lb");
+document.getElementById("shotList").addEventListener("click",e=>{const b=e.target.closest(".pv");if(!b)return;document.getElementById("lbImg").src=PV[b.dataset.pv];document.getElementById("lbCap").textContent=b.dataset.cap;try{lb.showModal()}catch(err){lb.setAttribute("open","")}});
+lb.addEventListener("click",()=>lb.close());
+renderChips();renderShots();
+</script>

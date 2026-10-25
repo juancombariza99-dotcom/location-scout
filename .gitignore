@@ -1,0 +1,12 @@
+# Your own scouts stay local
+places/*
+!places/.gitkeep
+
+# Local rollback copies
+versions/
+
+# Generated Higgsfield references
+refs/
+
+.DS_Store
+__pycache__/
