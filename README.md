@@ -23,15 +23,16 @@ Made for creators who film slow-living, work and yoga content in a new place eve
 
 ## Setup
 
-1. **Connect Higgsfield in Claude** (strongly recommended)
-   - Claude → Settings → Connectors → Higgsfield → sign in
+1. **Download**: green **Code** button → **Download ZIP** → unzip.
+2. **Add it to Claude**: upload or drag the unzipped folder (`location-scout-main`) into Claude (claude.ai, the desktop app or Claude Code).
+3. **Connect Higgsfield**: Claude → Settings → Connectors → Add custom connector → `https://mcp.higgsfield.ai/mcp` → sign in. Needs a Higgsfield account with credits.
    - Why: the previews are the point. Seeing yourself in each frame, in the actual room, is what makes filming take zero thinking.
    - Without it you still get the scout page, but the grid uses your plain room photos.
-2. **Download**: green **Code** button → **Download ZIP** → unzip → drag the `location-scout` folder into Claude.
-3. **Make it you**: open `character.md` and rewrite the description to look like you (age, build, hair, outfit).
-4. **Go**: drop your check-in photos into the chat and say *"Here are my check-in photos."*
+4. **Go**: attach 6–10 check-in photos and say *"Here are my check-in photos."*
 
-Claude checks Higgsfield and your credits first, shows the cost, and asks before generating anything.
+Claude checks Higgsfield and your credits first, shows the cost, and asks before generating anything. Works for any place, anywhere.
+
+**Optional, make it you:** open `character.md` and rewrite the stand-in to look like you (age, build, hair, outfit).
 
 ## Photo tips
 
@@ -50,7 +51,7 @@ Claude checks Higgsfield and your credits first, shows the cost, and asks before
 ## Repo layout
 
 ```
-CLAUDE.md          instructions Claude follows
+INSTRUCTIONS.md    instructions Claude follows
 character.md       your stand-in character
 templates/         the two page designs
 scripts/           build.py (place.json → both pages), resize.py

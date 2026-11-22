@@ -67,7 +67,7 @@ svg a{cursor:pointer}
 .seq{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(200px,62%);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;min-width:0}
 @media (min-width:760px){.seq{grid-auto-columns:220px}}
 .step{scroll-snap-align:start;display:grid;gap:8px;align-content:start;min-width:0}
-.step img{display:block;width:100%;max-width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:8px;background:var(--shade)}
+.step img,.step .noimg{display:block;width:100%;max-width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:8px;background:var(--shade)}
 .step p{margin:0;font-size:13.5px;color:var(--muted)}
 
 .chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;min-width:0}
@@ -187,8 +187,10 @@ document.getElementById("spotGrid").innerHTML=SPOTS.map(s=>`
   <h3>${esc(s.name)}</h3><p>${esc(s.about)}</p></article>`).join("");
 
 document.getElementById("seq").innerHTML=ROUTINE.map(r=>`
-  <article class="step"><img src="${PV[r.preview]}" alt="${esc(r.title)}" loading="lazy"><h3>${esc(r.title)}</h3><p>${esc(r.how)}</p></article>`).join("");
+  <article class="step">${r.preview&&PV[r.preview]?`<img src="${PV[r.preview]}" alt="${esc(r.title)}" loading="lazy">`:'<div class="noimg" aria-hidden="true"></div>'}<h3>${esc(r.title)}</h3><p>${esc(r.how)}</p></article>`).join("");
 if(!ROUTINE.length) document.getElementById("routine").hidden=true;
+document.querySelectorAll("#prep .panel").forEach(p=>{if(!p.querySelector("li")) p.hidden=true;});
+if(!document.querySelector("#prep .panel:not([hidden])")) document.getElementById("prep").hidden=true;
 
 function renderChips(){
   document.getElementById("chips").innerHTML=["All",...BUCKETS].map(b=>{
